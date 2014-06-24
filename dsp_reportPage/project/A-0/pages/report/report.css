@@ -1,0 +1,21 @@
+.title-con {
+	height: 40px;
+	background: #eee;
+}
+
+.page-title {
+	font-size: 20px;
+	line-height: 40px;
+	padding-left: 40px;
+}
+
+.button-con {
+	display: inline-block;
+	float: right;
+	/* vertical-align: middle; */
+	padding-top: 4px;
+}
+
+.button-con button {
+	margin-right: 7px;
+}

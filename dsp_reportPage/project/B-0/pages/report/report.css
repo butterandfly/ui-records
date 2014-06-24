@@ -1,0 +1,57 @@
+.title-con {
+	height: 40px;
+	background: #eee;
+	position: fixed;
+	top: 50px;
+	right: 0;
+	left: 0;
+}
+
+.page-title {
+	font-size: 20px;
+	line-height: 40px;
+	padding-left: 40px;
+}
+
+.button-con {
+	display: inline-block;
+	float: right;
+	/* vertical-align: middle; */
+	padding-top: 4px;
+}
+
+.button-con button {
+	margin-right: 7px;
+}
+
+.op-con, .index-con {
+	display: inline-block;
+}
+
+.date-con button {
+	margin-right: 10px;
+}
+
+.main {
+	margin-top: 97px;
+}
+
+.report-table th {
+	width: 250px;
+}
+
+.report-table .filter-row td {
+	background-color: #d9edf7 !important;
+}
+
+.report-table .show-search {
+	cursor: pointer;
+}
+
+.report-table .show-index-filter {
+	cursor: pointer;
+}
+
+.loading-msg {
+	top: 90px;
+}

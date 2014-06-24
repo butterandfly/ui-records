@@ -1,0 +1,23 @@
+<div class="main report col-lg-11">
+  <h2 class="sub-header">{{ title }}</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        {{#each indexes}}
+        <th>{{ this }}</th>
+        {{/each }}
+      </tr>
+      </thead>
+      <tbody>
+      {{#each rows}}
+      <tr>
+        {{#each this}}
+        <td>{{this}}</td>
+        {{/each}}
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

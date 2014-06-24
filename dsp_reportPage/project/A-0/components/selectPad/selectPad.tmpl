@@ -1,0 +1,35 @@
+<div class="select-pad">
+  <!--已选-->
+  <span class="badge selected-item">草莓新地 <span class="delete-item">X</span></span>
+  <span class="badge selected-item">圆筒 <span class="delete-item">X</span></span>
+  <!--新增-->
+  <span class="btn btn-default btn-sm add-new">+</span>
+  <!--选择冒泡框-->
+  <div class="select-modal hide">
+    <div class="select-title">
+      <span>请选择过滤条件</span>
+      <button type="button" class="close .pull-right" aria-hidden="true">&times;</button>
+    </div>
+    <!--搜索框-->
+    <div class="search">
+      <input type="text" placeholder="请输入搜索关键字"/>
+    </div>
+
+    <!--选择列表-->
+    <div class="select-list">
+      {{#each selectList }}
+      <div class="select-item">
+        <span class="select-item-icon">
+        </span>
+        <div class="select-item-title">{{ this }}</div>
+      </div>
+      {{/each  }}
+    </div>
+
+    <!--按钮-->
+    <div class="modal-foot">
+      <button class="btn btn-success btn-sm button-ok">确定</button>
+      <button class="btn btn-sm button-cancel">取消</button>
+    </div>
+  </div>
+</div>

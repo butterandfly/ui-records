@@ -1,0 +1,12 @@
+<div class="select-pad">
+  <!--搜索框与列表-->
+  <ul>
+    <li class="search-item"><input type="text" placeholder="输入搜索内容"/></li>
+    <li clsss="select-all">所有渠道</li>
+    {{#each selectList }}
+    <li>{{ this }}</li>
+    {{/each }}
+  </ul>
+  <!--更多-->
+  <span class="more">更多</span>
+</div>
