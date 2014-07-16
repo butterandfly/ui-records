@@ -1,0 +1,307 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	padding-top: 50px;
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+.nav-sidebar > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.nav-sidebar > .active > a {
+	color: #fff;
+	background-color: #428bca;
+}
+
+
+
+
+// ------- colors --------
+// red
+$primary-red: #e41919;
+$dark-red: rgb(134, 20, 39);
+// gray
+$gray-lv1: #eee;
+$gray-lv2: #ddd;
+$gray-lv3: #ededed;
+$gray-lv7: #777;
+
+// ------- side bar -------
+$side-bar-slim-color: transparent;
+
+// ------- layout -------
+
+// *** top-nav
+$top-nav-z-index: 200;
+
+// *** grid-modal
+// 下拉窗按钮的位置
+$grid-modal-btn-right: 420px;
+
+// *** nav-side-bar
+$nav-side-bar-slim-width: 20px;
+$nav-side-bar-content-width: 200px;
+$nav-side-bar-z-index: 100;
+
+// **** filter
+$filter-bar-slim-width: 20px;
+$filter-bar-content-width: 200px;
+$filter-bar-z-index: 100;
+
+// *** modal-side-bar
+$modal-side-bar-slim-width: 10px;
+$modal-side-bar-content-width: 200px;
+
+// ------- 动画时间 -------
+$grid-modal-show-interval: 0.5s;
+$grid-modal-show-delay: 0s;
+
+//
+@mixin hide-by-xy {
+  width: 0;
+  height: 0;
+}
+@mixin show-by-xy {
+  width: initial;
+  height: initial;
+}
+
+// -------- 位置 --------
+// 固定在左方
+@mixin fixed-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+// 固定在右方
+@mixin fixed-right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+// absolute定位在左方
+@mixin absolute-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// absolute定位在左上方
+@mixin absolute-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// absolute定位在右方
+@mixin absolute-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+// absolute定位在右上方
+@mixin absolute-top-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// 垂直居中
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// ------- 动画 -------
+
+@mixin translate-x($x) {
+  -webkit-transform: translate($x);
+}
+
+@mixin all-ease-transition($time) {
+  -webkit-transition: all $time ease;
+}
+
+@mixin delay($time) {
+  -webkit-transition-delay: $time;
+}
+
+// ------- 列表 -------
+@mixin rg-ul-clean {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// ------- 动画 -------
+@mixin managing-move-left {
+  -webkit-transition: all 0.7s ease;
+}
+
+
+
+// ------- 全局样式 --------
+
+// 该样式用于body，打开modal的时候禁用body的scroller
+.modal-opened {
+  //overflow-y: hidden;
+}
+
+
+
+
+/* ------- Z ------- */
+.rg-clean-ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#backdrop {
+	position: fixed;
+	top: 90px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 6;
+	background-color: #000;
+	opacity: .5;
+}
+
+.loading-msg {
+	position: absolute;
+	top: 0;
+	z-index: 200;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.loading-text {
+	margin: auto;
+	z-index: 202;
+	position: relative;
+	width: 100px;
+}
+
+.loading-backdrop {
+	position: absolute;
+	background-color: black;
+	opacity: .5;
+	top: 0;
+	z-index: 201;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.loading-backdrop div {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.fullscreen-container {
+	display: table;
+	width: 100%;
+}
+
+.app-loading {
+  display: none;
+}
+
+.app-loading.ng-cloak {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  z-index: 9000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  font-size: 5em;
+}
+
+//.manage-page {
+//  display: block;
+//
+//  position: absolute;
+//  top: 0;
+//  left: 100%;
+//
+//  width: 0; /* 这里设置为0是为了不让其显示，若使用display:none的话会令动画变得麻烦*/
+//  height: 88%;
+//
+//  margin: 2%;
+//  border: solid 1px #777;
+//  margin-top: 70px;
+//  background-color: lightcyan;
+//}
+//
+//.manage-page.moving-left {
+//  left: 0;
+//  width: 96%; /* 这里设置成正常显示的宽度 */
+//
+//  -webkit-transition: left 0.7s ease;
+//}
+//
+//.manage-page.moving-left-remove {
+//  // 这里使用remove样式，不让manage-page闪变回width:0
+//  width: 96%;
+//  -webkit-transition: left 0.7s ease;
+//}
+
+
+.manage-page {
+  display: block;
+
+  position: absolute;
+  top: 0;
+
+  width: 96%;
+  height: 88%;
+
+  margin: 2%;
+  border: solid 1px #777;
+  margin-top: 70px;
+  background-color: lightcyan;
+}
+
+.manage-page.ng-hide-remove {
+  left: 100%;
+  -webkit-transition: left 0.7s ease;
+}
+.manage-page.ng-hide-remove-active {
+  left: 0;
+}
+
+.manage-page.ng-hide-add {
+  left: 0;
+  -webkit-transition: left 0.7s ease;
+}
+.manage-page.ng-hide-add-active {
+  left: 100%;
+}

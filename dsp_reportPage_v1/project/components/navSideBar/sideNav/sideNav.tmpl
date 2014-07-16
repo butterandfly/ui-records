@@ -1,0 +1,7 @@
+<!--<nav-search rg-data="{list: navList}"></nav-search>-->
+<ul class="">
+  <li ng-repeat="item in navList" ng-switch="!!item.subList">
+    <span ng-switch-when="false" class="link-lv1">{{ item.text }}</span>
+    <link-group ng-switch-when="true" rg-data="{title: item.text, list: item.subList}"></link-group>
+  </li>
+</ul>

@@ -1,0 +1,30 @@
+manage-center{
+  display: block;
+
+  position: absolute;
+  top: 0;
+
+  width: 96%;
+  height: 88%;
+
+  margin: 2%;
+  border: solid 1px #777;
+  margin-top: 70px;
+  background-color: lightcyan;
+}
+
+manage-center.ng-hide-remove {
+  left: 100%;
+  -webkit-transition: left 0.7s ease;
+}
+manage-center.ng-hide-remove-active {
+  left: 0;
+}
+
+manage-center.ng-hide-add {
+  left: 0;
+  -webkit-transition: left 0.7s ease;
+}
+manage-center.ng-hide-add-active {
+  left: 100%;
+}

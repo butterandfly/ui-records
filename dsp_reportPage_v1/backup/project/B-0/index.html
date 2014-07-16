@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dashboard Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+  <!--animate.css-->
+  <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
+
+  <!-- 自定义css -->
+  <!--<link href="source/app.css" rel="stylesheet">-->
+  <link href="../../base/base.css" rel="stylesheet">
+  <link rel="stylesheet" href="pages/report/report.css"/>
+  <link href="components/reportFilterIntro/reportFilterIntro.css" rel="stylesheet">
+  <link href="components/reportFilter/reportFilter.css" rel="stylesheet">
+  <link href="components/selectPadV2/selectPadV2.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <input type="text" class="form-control" placeholder="Search...">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <z-controller controller="report"></z-controller>
+  </div>
+  <!--提示模式的过滤器-->
+  <!--<z-controller controller="report-filter-intro"></z-controller>-->
+  <!--完整模式的过滤器-->
+  <!--<z-controller controller="report-filter"></z-controller>-->
+</div>
+
+<div id="backdrop" class="hide"></div>
+
+<!--jquery-->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+
+<!--handlebars -->
+<script src="/bower_components/handlebars/handlebars.js"></script>
+
+<!--项目代码-->
+<script type="text/javascript" src="../../base/z.js"></script>
+<!--<script type="text/javascript" src="source/app.js"></script>-->
+<script type="text/javascript" src="pages/report/report.js"></script>
+<script type="text/javascript" src="components/reportFilterIntro/reportFilterIntro.js"></script>
+<script type="text/javascript" src="components/reportFilter/reportFilter.js"></script>
+<script type="text/javascript" src="components/selectPadV2/selectPadV2.js"></script>
+<script type="text/javascript">
+  Z.boot();
+</script>
+
+</body>
+</html>

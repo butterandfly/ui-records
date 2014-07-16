@@ -1,0 +1,40 @@
+modal-side-nav {
+  width: $modal-side-bar-content-width;
+  display: block;
+  height: $grid-modal-content-height;
+}
+
+.clear-btn {
+	height: 40px;
+	background: $primary-red;
+	font-size: 18px;
+	font-weight: bolder;
+	color: white;
+	cursor: pointer;
+	line-height: 40px;
+
+  text-align: center;
+}
+
+.nav-list {
+    background-color: #eee;
+	border-right: 1px solid #aaa;
+
+  height: $grid-modal-content-height - 40px;
+}
+
+.nav-list li a{
+	display: block;
+	padding-left: 10px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	border-bottom: 1px solid #aaa;
+	color: #444;
+}
+
+.nav-list li a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #333;
+}

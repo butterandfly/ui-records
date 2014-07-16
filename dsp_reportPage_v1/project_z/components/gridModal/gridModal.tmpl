@@ -1,0 +1,25 @@
+<!--<div class="grid-modal-dropdown-btn" ng-click="toggleActive()"></div>-->
+<!--<div class="grid-modal-backdrop" ng-click="toggleActive()" ng-show="isActive">-->
+<!--</div>-->
+<!--<div class="grid-modal-content" animate-show="isActive" animate-show-in="bounceInDown" animate-show-out="bounceOutUp">-->
+  <!--<div class="grid-modal-dropup-btn" ng-click="toggleActive()"></div>-->
+<!--</div>-->
+
+<div class="grid-modal-backdrop" ng-click="toggleActive()" ng-show="isActive">
+</div>
+  <div class="grid-modal" ng-class="{'active': isActive}" animate-on="isActive" animate-on-in="grid-modal-in" animate-on-out="grid-modal-out">
+
+  <side-bar id="grid-modal-side-bar" side="left" service="gridModalLayoutService">
+    <div>
+      <div class="clear-btn">清空所有</div>
+      <ul class="rg-clean-ul nav-list">
+        <li><a href="">荷兰</a></li>
+        <li><a href="">德国</a></li>
+        <li><a href="">美国</a></li>
+      </ul>
+    </div>
+  </side-bar>
+
+  <!--gridModal触发按钮-->
+  <div class="grid-modal-btn" ng-click="toggleActive()"></div>
+</div>

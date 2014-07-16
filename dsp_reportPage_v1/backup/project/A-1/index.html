@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="dspApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dashboard Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+  <!--font-awesome-->
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css"/>
+
+  <!--animate.css-->
+  <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
+
+  <!-- 自定义css -->
+  <!--<link href="source/app.css" rel="stylesheet">-->
+  <link href="../../base/base.css" rel="stylesheet">
+  <link href="source/app.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<top-nav></top-nav>
+
+<!--<div class="container-fluid">-->
+  <!--<div class="row">-->
+
+<div>
+    <!--左导航-->
+    <left-side-bar></left-side-bar>
+    <!--主页面-->
+    <report></report>
+    <!--右侧工具栏-->
+    <right-side-bar></right-side-bar>
+</div>
+
+
+
+
+  <!--提示模式的过滤器-->
+  <!--<report-filter-intro></report-filter-intro>-->
+  <!--完整模式的过滤器-->
+  <!--<z-controller controller="report-filter"></z-controller>-->
+  <!--<report-filter></report-filter>-->
+
+<!--jquery-->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+
+<!--rg-->
+<script type="text/javascript" src="/base/rg.js"></script>
+
+<!--angularjs-->
+<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
+
+<script type="text/javascript" src="/bower_components/angular-strap/dist/angular-strap.js"></script>
+<script type="text/javascript" src="/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+
+<!--项目代码-->
+<script type="text/javascript" src="/base/app.js"></script>
+<script type="text/javascript" src="/base/services.js"></script>
+<script type="text/javascript" src="/base/diretives.js"></script>
+
+<script type="text/javascript" src="pages/report/report.js"></script>
+<script type="text/javascript" src="components/reportFilterIntro/reportFilterIntro.js"></script>
+<script type="text/javascript" src="components/reportFilter/reportFilter.js"></script>
+<script type="text/javascript" src="components/selectPad/selectPad.js"></script>
+
+<script type="text/javascript" src="components/leftSideBar/leftSideBar.js"></script>
+<script type="text/javascript" src="components/rightSideBar/rightSideBar.js"></script>
+<script type="text/javascript" src="components/topNav/topNav.js"></script>
+
+</body>
+</html>

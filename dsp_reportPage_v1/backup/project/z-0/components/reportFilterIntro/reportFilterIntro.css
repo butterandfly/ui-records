@@ -1,0 +1,10 @@
+#report-filter-intro {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	width: 180px;
+	z-index: 778;
+	bottom: 0;
+	border-left: 1px #777 solid;
+	cursor: pointer;
+}

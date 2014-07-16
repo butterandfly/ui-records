@@ -1,0 +1,7 @@
+<div class="right-side-bar" ng-mouseenter="toggleSlim()" ng-mouseleave="toggleSlim()" ng-class="{slim: isSlim}">
+  <div class="right-side-bar-slim" ng-show="isSlim" ng-click="toggleSlim()">
+  </div>
+  <div class="" ng-hide="isSlim">
+    <div ng-click="layoutService.toggleRightCrushing()"><a class="btn btn-sm btn-primary">固定</a></div>
+  </div>
+</div>

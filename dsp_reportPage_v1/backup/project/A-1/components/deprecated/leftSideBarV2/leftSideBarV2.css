@@ -1,0 +1,25 @@
+.hide-btn {
+	position: absolute;
+	right: 10px;
+}
+
+#left-side-bar {
+	width: 270px;
+	background-color: #ddd;
+	position: fixed;
+	left: 0;
+	top: 50px;
+	bottom: 0;
+	z-index: 207;
+}
+
+#left-side-bar.slim {
+	width: 10px;
+	background-color: coral;
+}
+
+#left-side-bar-slim {
+	width: 17px;
+	position: relative;
+	background-color: coral;
+}

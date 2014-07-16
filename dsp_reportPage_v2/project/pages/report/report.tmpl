@@ -1,0 +1,10 @@
+<div class="main-container"
+     ng-class="{'left-crush': layoutService.leftBar.status == 'crush',
+     'right-crush': layoutService.rightBar.status == 'crush',
+     'moving-left': layoutService.isManaging,
+     'grid-modal-mode': layoutService.gridModal.isActive}">
+
+<div class="">
+  <grid></grid>
+</div>
+</div>

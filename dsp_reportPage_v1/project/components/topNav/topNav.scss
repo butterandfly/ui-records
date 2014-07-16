@@ -1,0 +1,48 @@
+top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  z-index: $top-nav-z-index;
+
+  background-color: #172128;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .app-title {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding-left: 10px;
+    font-weight: bolder;
+
+    padding-left: 30px;
+
+    display: inline-block;
+    line-height: 50px;
+    height: 50px;
+  }
+
+  .settings {
+    @include rg-ul-clean;
+
+    li {
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+
+      padding-left: 17px;
+      padding-right: 17px;
+
+      a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+  }
+}

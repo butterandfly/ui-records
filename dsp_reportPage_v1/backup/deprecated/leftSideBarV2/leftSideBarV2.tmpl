@@ -1,0 +1,11 @@
+<div id="left-side-bar" ng-mouseenter="slim2Float()" ng-mouseleave="(status == 'crush') || triggerSlim()" ng-class="{slim: status == 'slim'}">
+
+<!-- slim条  -->
+<div id="left-side-bar-slim" ng-show="status == 'slim'"></div>
+
+ <!--完整栏 -->
+<div class="" ng-show="!(status == 'slim')">
+  <div ng-click="toggleCrush()"><a class="btn btn-sm btn-primary">固定</a></div>
+</div>
+
+</div>

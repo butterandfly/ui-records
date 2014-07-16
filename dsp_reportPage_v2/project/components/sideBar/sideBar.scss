@@ -1,0 +1,72 @@
+side-bar {
+
+  .wrapper {
+    height: 100%
+  }
+
+  .slim-wrap {
+    position: absolute;
+    left: 0;
+    height: 100%;
+
+    .slim-content {
+      height: 100%;
+    }
+  }
+
+  .content-wrap {
+    position: absolute;
+    left: 0;
+    height: 100%;
+
+    z-index: 10;
+
+    .nail-btn, .cancel-crush-btn {
+      position: absolute;
+      //right: -20px;
+      left: 0;
+      width: 20px;
+      height: 100%;
+
+      background-color: #c7c7c7;
+      font-size: 1.5em;
+      color: black;
+      opacity: 0;
+    }
+
+    .nail-btn:hover, .cancel-crush-btn:hover {
+      opacity: 0.5;
+    }
+
+    .content {
+      height: 100%
+    }
+  }
+
+
+}
+
+side-bar .right {
+  .slim-wrap {
+    left: auto;
+    right: 0;
+  }
+
+  .content-wrap {
+    left: auto;
+    right: 0;
+
+    .nail-btn, .cancel-crush-btn {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

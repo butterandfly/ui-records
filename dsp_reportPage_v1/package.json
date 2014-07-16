@@ -1,0 +1,17 @@
+{
+  "name": "dsp_reportPage",
+  "version": "0.0.1",
+  "description": "Dsp report page.",
+  "main": "index.html",
+  "dependencies": {
+    "bower": "^1.3.5",
+    "gulp": "^3.8.0",
+    "gulp-concat": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}

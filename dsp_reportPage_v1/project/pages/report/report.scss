@@ -1,0 +1,48 @@
+.main-container {
+  position: relative;
+  left: 0;
+
+  padding-left: 20px;
+
+  //padding-right: $filter-intro-width + 20px;
+  padding-right: 200px + 20px;
+
+  //transition: padding 0.2s linear;
+}
+
+.main-container.moving-left {
+  left: -100%;
+
+  @include managing-move-left;
+}
+.main-container.moving-left-remove {
+  @include managing-move-left;
+}
+
+// 受左导航挤压时的样式
+.main-container.left-crush {
+  padding-left: $nav-side-bar-content-width + 20px;
+  margin-left: 1px; /* #hack: 不设置一些东西的话容器宽度不会改变 */
+}
+
+// 受右过滤器挤压时的样式
+.main-container.right-crush {
+	padding-right: $filter-width + 20px;
+	margin-right: -1px; /* #hack: 不设置一些东西的话容器宽度不会改变 */
+}
+
+
+
+table tr.ng-enter {
+	transition: 0.5s;
+	opacity: 0;
+}
+
+table tr.ng-enter-stagger {
+	transition-delay: 0.05s;
+}
+
+table tr.ng-enter-active {
+	opacity: 1;
+}
+

@@ -1,0 +1,22 @@
+<div id="left-side-bar" ng-mouseenter="toggleSlim()" ng-mouseleave="toggleSlim()" ng-class="{slim: isSlim}">
+<div id="left-side-bar-slim" ng-show="isSlim" ng-click="toggleSlim()">
+  <!--<div ><i class="fa fa-chevron-right"></i></div>-->
+</div>
+<div class="" ng-hide="isSlim">
+  <!-- 收起按钮 -->
+  <!--<div class="hide-btn" ng-click="toggleSlim()">-->
+    <!--<i class="fa fa-chevron-left"></i>-->
+  <!--</div>-->
+  <!--<div class="hide-btn" ng-click="toggleLeftCrushing()">固定</div>-->
+  <div ng-click="toggleLeftCrushing()"><a class="btn btn-sm btn-primary">固定</a></div>
+  <!--搜索-->
+  <nav-search rg-data="{list: navList}"></nav-search>
+  <!--列表-->
+  <ul class="">
+    <li ng-repeat="item in navList" ng-switch="!!item.subList">
+      <span ng-switch-when="false">{{ item.text }}</span>
+      <link-group ng-switch-when="true" rg-data="{title: item.text, list: item.subList}"></link-group>
+    </li>
+  </ul>
+</div>
+</div>

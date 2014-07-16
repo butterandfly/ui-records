@@ -1,0 +1,32 @@
+<!--布景-->
+<div class="grid-modal-backdrop" ng-click="toggleActive()" ng-show="isActive"></div>
+
+  <div class="grid-modal" ng-class="{'active': isActive, 'tipping': isTipping}">
+  <!--侧栏-->
+  <side-bar id="grid-modal-nav-side-bar" side="left" service="gridModalLayoutService" status="crush">
+    <div rg-multi-transclude-name="content">
+      <!--<modal-side-nav>-->
+      <!--<ul class="rg-clean-ul nav-list">-->
+        <!--<li ng-repeat="grid in listCtrler.list" ng-class="{'selected': listCtrler.isSelected(grid)}"><a href="#" ng-click="listCtrler.selectItem(grid)">{{ grid.title }} <i class="fa fa-times" ng-click="listCtrler.removeItem(grid)"></i></a></li>-->
+      <!--</ul>-->
+      <!--</modal-side-nav>-->
+      <grid-nav></grid-nav>
+    </div>
+  </side-bar>
+
+  <side-bar id="grid-modal-filter-bar" side="right" service="gridModalLayoutService" status="slim">
+    <report-filter-intro rg-multi-transclude-name="content"></report-filter-intro>
+  </side-bar>
+
+  <!--内容区-->
+  <div class="grid-modal-content" ng-class="{'left-crush': modalLayout.leftBar.status === 'crush', 'right-crush': modalLayout.rightBar.status === 'crush'}">
+    <!--表格-->
+    <modal-grid current-grid="listCtrl.selectedItem"></modal-grid>
+  </div>
+
+  <!--gridModal触发按钮-->
+  <!--<div class="grid-modal-btn" ng-click="toggleActive()" ng-class="{'tipping': isTipping}">-->
+    <!--<span class="grid-count" ng-hide="isTipping">17</span>-->
+    <!--<span class="plus-one" ng-show="isTipping">+1</span>-->
+  <!--</div>-->
+</div>

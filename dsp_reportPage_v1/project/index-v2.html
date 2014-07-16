@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="dspApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dashboard Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+  <!--font-awesome-->
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css"/>
+
+  <!--animate.css-->
+  <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
+
+  <!-- 自定义css -->
+  <!--<link href="../base/base.css" rel="stylesheet">-->
+  <link href="source/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="app-loading ng-cloak">
+  <i class="fa fa-refresh fa-spin"></i>
+</div>
+
+<!--下拉窗-->
+<grid-modal></grid-modal>
+
+<!--顶部导航-->
+<top-nav></top-nav>
+
+<div>
+    <!--左导航-->
+    <side-bar id="nav-side-bar" side="left" status="crush" ng-class="{'moving-left': layoutService.isManaging}">
+        <!--<div rg-multi-transclude-name="content"><side-nav></side-nav></div>-->
+      <side-nav rg-multi-transclude-name="content">
+      </side-nav>
+    </side-bar>
+
+    <!--右侧工具栏-->
+    <side-bar id="filter-bar" side='right' status="crush" ng-class="{'moving-left': layoutService.isManaging}">
+      <report-filter-intro rg-multi-transclude-name="slim"></report-filter-intro>
+      <report-filter rg-multi-transclude-name="content"></report-filter>
+    </side-bar>
+
+    <!--主页面-->
+    <report></report>
+
+</div>
+
+
+<!--<div class="manage-page" ng-show="layoutService.isManaging" ng-class="{'moving-left': layoutService.isManaging}"></div>-->
+<div class="manage-page" ng-class="{'moving-left': layoutService.isManaging}"></div>
+
+
+
+  <!--提示模式的过滤器-->
+  <!--<report-filter-intro></report-filter-intro>-->
+  <!--完整模式的过滤器-->
+  <!--<z-controller controller="report-filter"></z-controller>-->
+  <!--<report-filter></report-filter>-->
+
+<!--jquery-->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+
+<!--rg-->
+<script type="text/javascript" src="/base/rg.js"></script>
+
+<!--angularjs-->
+<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
+
+<script type="text/javascript" src="/bower_components/angular-strap/dist/angular-strap.js"></script>
+<script type="text/javascript" src="/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+
+<!--项目代码-->
+<script type="text/javascript" src="/base/app.js"></script>
+<script type="text/javascript" src="/base/services.js"></script>
+<script type="text/javascript" src="/base/directives.js"></script>
+
+<script type="text/javascript" src="source/app.js"></script>
+
+<!--<script type="text/javascript" src="pages/report/report.js"></script>-->
+<!--<script type="text/javascript" src="components/reportFilterIntro/reportFilterIntro.js"></script>-->
+<!--<script type="text/javascript" src="components/reportFilter/reportFilter.js"></script>-->
+<!--<script type="text/javascript" src="components/selectPad/selectPad.js"></script>-->
+
+
+<!--<script type="text/javascript" src="components/sideBar/sideBar.js"></script>-->
+<!--<script type="text/javascript" src="components/topNav/topNav.js"></script>-->
+
+<!--&lt;!&ndash;gridModal&ndash;&gt;-->
+<!--<script type="text/javascript" src="components/gridModal/gridModal.js"></script>-->
+<!--<script type="text/javascript" src="components/grid/grid.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+.grid-modal-backdrop {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 1020;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.grid-modal-btn {
+	position: absolute;
+	bottom: -60px;
+	margin-top: 100px;
+	width: 60px;
+	height: 60px;
+	background-color: deeppink;
+	right: 420px;
+	cursor: pointer;
+}
+
+.grid-modal {
+	z-index: 1030;
+	top: -630px;
+	left: 0;
+	right: 0;
+	height: 630px;
+
+	background-color: white;
+	position: fixed;
+	box-shadow: 0 0 10px #444;
+}
+
+.grid-modal.active {
+	top: -30px;
+}
+
+@-webkit-keyframes gridModalIn {
+	0% {
+		-webkit-transform: translateY(-630px);
+		transform: translateY(-630px);
+	}
+
+	40% {
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+	}
+
+	70% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+.grid-modal-in {
+	-webkit-animation-name: gridModalIn;
+	-webkit-animation-duration: 0.5s;
+}
+
+@-webkit-keyframes grid-modal-out {
+	0% {
+		-webkit-transform: translateY(600px);
+		transform: translateY(600px);
+	}
+
+	30% {
+		-webkit-transform: translateY(620px);
+		transform: translateY(620px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+
+.grid-modal-out {
+	-webkit-animation-name: grid-modal-out;
+	-webkit-animation-duration: 0.5s;
+}

@@ -1,0 +1,85 @@
+<div class="title-con">
+  <span class="page-title">报表与管理</span>
+  <span class="button-con"><button class="btn btn-success">新增活动</button><button class="btn btn-default">模板管理</button></span>
+</div>
+<z-controller controller="report-filter-intro"></z-controller>
+<z-controller controller="report-filter"></z-controller>
+
+<div class="loading-msg hide">
+  <div class="loading-text">
+    <label class="bg-warning">正在加载...</label>
+  </div>
+  <div class="loading-backdrop"></div>
+</div>
+
+<div class="main report">
+  <div class="pull-right">
+    <div class="op-con">
+      <button class="btn btn-primary btn-sm">批量操作</button>
+      <button class="btn btn-primary  btn-sm">自动刷新</button>
+    </div>
+    <div class="index-con btn-group">
+      <button class="btn btn-default btn-sm">默认</button>
+      <button class="btn btn-default btn-sm">前端</button>
+      <button class="btn btn-default btn-sm">落地页</button>
+      <button class="btn btn-default btn-sm">转化</button>
+      <button class="btn btn-default btn-sm">成本</button>
+    </div>
+  </div>
+  <div class="date-con">
+    <button class="btn btn-default btn-sm">2014-06-03 ~ 2014-06-06</button>
+    <a href="#">今日</a> |
+    <a href="#">昨日</a> |
+    <a href="#">最近7天</a>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped report-table">
+      <thead>
+      <tr>
+        {{#each indexes}}
+        <th>{{ this.name }}
+          {{#if hasSearch}}
+          <span class="glyphicon glyphicon-search show-search"></span>
+          {{/if }}
+          {{#if hasIndexFilter}}
+          <span class="glyphicon glyphicon-glass show-index-filter"></span>
+          {{/if }}
+        </th>
+        {{/each }}
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="filter-row hide">
+        {{#each indexes}}
+        <td>
+          {{#if hasSearch}}
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="输入关键字">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">OK</button>
+            </span>
+          </div><!-- /input-group -->
+          {{/if}}
+          {{#if hasIndexFilter}}
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">OK</button>
+            </span>
+          </div><!-- /input-group -->
+          {{/if }}
+        </td>
+        {{/each }}
+
+      </tr>
+      {{#each rows}}
+      <tr>
+        {{#each this}}
+        <td>{{this}}</td>
+        {{/each}}
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

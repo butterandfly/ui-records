@@ -1,0 +1,36 @@
+<!--table内容-->
+<div class="title-date-row">
+  <h3 class="grid-title">活动报表</h3>
+  <div class="date-filter">
+    <button class="btn btn-default btn-sm">2014-06-07 ~ 1014-06-15</button>
+    <rg-btn-group-radio list="dateTypeList"></rg-btn-group-radio>
+  </div>
+</div>
+<!--<div class="report-table-cont-lv1">-->
+<!--<div class="report-table-cont fixed-head">-->
+  <div class="report-table-cont">
+  <table class="table table-striped">
+  <!--<table>-->
+    <thead>
+    <tr>
+      <th ng-repeat="index in reportIndexes">
+        <div class="fixed-container">{{ index.name }}</div>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="row in rows">
+      <td ng-repeat="index in reportIndexes">
+        {{ row[index.key] }}
+        <!--<span class="sub-grid-btns" ng-if="index.key === 'name'">-->
+          <!--<subgrid-button></subgrid-button>-->
+        <!--</span>-->
+        <popover ng-if="index.key === 'name'">
+          <subgrid-button></subgrid-button>
+        </popover>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<!--</div>-->

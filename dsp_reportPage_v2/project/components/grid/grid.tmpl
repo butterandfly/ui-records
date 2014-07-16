@@ -1,0 +1,50 @@
+<!--table内容-->
+<div class="title-date-row">
+  <h3 class="grid-title">活动报表</h3>
+  <div class="date-filter">
+    <button class="btn btn-default btn-sm">2014-06-07 ~ 1014-06-15</button>
+    <rg-btn-group-radio list="dateTypeList"></rg-btn-group-radio>
+  </div>
+</div>
+
+<!--TODO: 应将此独立成模块-->
+<div class="grid-fixable">
+<div class="grid-scrollable">
+
+  <!-- 固定的表头 -->
+  <!--<table class="table table-striped fixed-header">-->
+  <div class="fixed-header-cont">
+  <table class="fixed-header">
+    <thead>
+    <th ng-repeat="index in reportIndexes" class="{{ $index === 0 ? 'fixed-col-1' : '' }}">
+      <div class="fixed-container">{{ index.name }}</div>
+    </th>
+    </thead>
+  </table>
+  </div>
+
+  <!-- 真正的表格内容 -->
+  <!--<table class="table table-striped origin-table">-->
+  <table class="origin-table">
+    <thead>
+    <tr>
+      <th ng-repeat="index in reportIndexes" class="{{ $index === 0 ? 'fixed-col-1' : '' }}">
+        <div class="fixed-container">{{ index.name }}</div>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="row in rows" ng-class="{'preselected': isPreselectedRow(row)}" ng-mouseenter="preselectRow(row)" ng-mouseleave="unPreselectRow(row)">
+      <td ng-repeat="index in reportIndexes" class="{{ $index === 0 ? 'fixed-col-1' : '' }}">
+        {{ row[index.key] }}
+        <subgrid-button-group
+          ng-if="index.key === 'name'"
+          show-btns="{{isPreselectedRow(row)}}"
+          row-data="{{ row }}">
+        </subgrid-button-group>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>

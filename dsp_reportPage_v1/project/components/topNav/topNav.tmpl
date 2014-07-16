@@ -1,0 +1,9 @@
+<div class="">
+  <a class="app-title" href="#">Bidding X</a>
+</div>
+<ul class="pull-right settings">
+  <li><a href="#">admin@qq.com</a></li>
+  <li ng-click="layoutService.toggleManaging()">
+    <a href="#"><i class="fa fa-chevron-{{ layoutService.isManaging ? 'right' : 'left' }}"></i> {{ layoutService.getOtherPageName() }}</a>
+  </li>
+</ul>

@@ -1,0 +1,133 @@
+<div id="report-filter" class="hide">
+<div class="row"></div>
+<div class="select-area col-md-10">
+<!--纬度选择、组合-->
+<div class="report-filter-item">
+  <label>纬度：</label>
+  <span class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option1"> 单个
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option2"> 组合
+    </label>
+  </span>
+  <div class="lat-select-pad">
+    <label><input type="radio" name="lat-s" > 活动</label>
+    <label><input type="radio" name="lat-s" > 创意包</label>
+    <label><input type="radio" name="lat-s" > 渠道</label>
+  </div>
+  <div class="lat-comb-pad">
+    <label><input type="checkbox" name="lat-s" > 活动</label>
+    <label><input type="checkbox" name="lat-s" > 创意包</label>
+    <label><input type="checkbox" name="lat-s" > 渠道</label>
+    <label><input type="checkbox" name="lat-s" > 日期</label>
+  </div>
+</div>
+
+<!--过滤-->
+<!--状态-->
+<div class="report-filter-item">
+  <label class="filter-label">类型：</label>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option0"> 所有
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option1"> PC广告
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option2"> 移动广告
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option3"> 广告监测
+    </label>
+  </div>
+</div>
+
+<div class="report-filter-item">
+  <label class="filter-label">渠道：</label>
+  <z-controller controller="select-pad-v2"></z-controller>
+</div>
+<div class="report-filter-item">
+  <label class="filter-label">标签：</label>
+  <z-controller controller="select-pad-v2"></z-controller>
+</div>
+<div class="report-filter-item">
+  <label class="filter-label">状态：</label>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option1"> 所有状态
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option2"> 进行中
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option3"> 已暂停
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option4"> 未开始
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option5"> 已结束
+    </label>
+  </div>
+</div>
+<div class="report-filter-item">
+  <label class="filter-label">纬度过滤：</label>
+  <div class="lat-select">
+    <div class="lat-select-head">
+      <!--下拉框-->
+      <div class="btn-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+          创意包 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">渠道</a></li>
+          <li><a href="#">落地页</a></li>
+        </ul>
+      </div>
+
+      <!--搜索框-->
+      <input type="text" placeholder="请输入搜索内容"/>
+      <span class="btn btn-link">全选</span>
+    </div>
+    <div class="lat-select-body">
+      <ul>
+        <li>biddingx宣传黑色</li>
+        <li>biddingx</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 已选条件 -->
+  <div class="show-selected-lat">
+    <div class="show-selected-lat-head">
+      <label>已选条件</label>
+      <span class="btn btn-link pull-right">清空</span>
+    </div>
+    <div class="show-selected-lat-body">
+      <ul>
+        <li>
+          <label>创意包</label>
+          <ul>
+            <li>biddingx宣传黑色<button type="button" class="close" aria-hidden="true">&times;</button></li>
+            <li>谷歌特制创意包<button type="button" class="close" aria-hidden="true">&times;</button></li>
+          </ul>
+        </li>
+        <li>
+          <label>落地页</label>
+          <ul>
+            <li>biddingx宣传黑色<button type="button" class="close" aria-hidden="true">&times;</button></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div class="button-area col-md-2">
+  <button class="btn btn-success button-filter">应用</button>
+</div>
+</div>
+</div>

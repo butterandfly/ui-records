@@ -1,0 +1,18 @@
+side-nav {
+  display: block;
+  background: #172128;
+  height: 100%;
+
+  .link-lv1 {
+    padding: 0 17px 0 30px;
+    line-height: 50px;
+    height: 50px;
+    color: white;
+  }
+
+  ul {
+    @include rg-ul-clean;
+    width: $nav-side-bar-content-width;
+    height: 100%;
+  }
+}

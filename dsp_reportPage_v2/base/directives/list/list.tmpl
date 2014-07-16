@@ -1,0 +1,8 @@
+<!--选择列表-->
+<div class="select-list">
+    <div class="select-item" ng-repeat="item in listCtrler.list" ng-click="listCtrler.selectItem(item)" ng-class="{'bg-primary': listCtrler.isSelected(item)}">
+        <span class="select-item-icon">
+        </span>
+    <div class="select-item-title">{{item}}</div>
+  </div>
+</div>

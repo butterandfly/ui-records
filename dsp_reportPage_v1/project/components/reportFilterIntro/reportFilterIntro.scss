@@ -1,0 +1,74 @@
+
+
+#report-filter-intro {
+  height: 100%;
+  width: $filter-intro-width;
+
+  // TODO: 两种方案
+  background-color: $gray-lv7;
+  //background-color: $gray-lv3;
+
+}
+
+#report-filter-intro label {
+  //color: #444;
+  //height: 35px;
+  //line-height: 35px;
+  //margin-bottom: 0;
+}
+
+report-filter-intro {
+
+ .intro-item {
+   padding-bottom: 7px;
+   padding-left: 13px;
+
+   border-bottom: 1px solid #555;
+
+    label {
+      color: #444;
+      height: 35px;
+      line-height: 35px;
+      margin-bottom: 0;
+    }
+  }
+
+  div {
+    // TODO: 两种方案
+    color: white;
+    //color: #222;
+  }
+
+}
+
+
+
+.list-pad {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.list-pad li {
+	display: inline-block;
+	width: 100px;
+	padding: 2px;
+}
+
+.list {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.list li {
+	padding-bottom: 5px;
+}
+
+.list li span {
+	margin-left: 5px;
+}
+
+.lat-title {
+	font-weight: bolder;
+}

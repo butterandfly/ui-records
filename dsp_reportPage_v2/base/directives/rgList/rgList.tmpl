@@ -1,0 +1,17 @@
+<!--
+  /* 用法 */
+  <rg-list
+    ctrler="{{ listCtrler }}" // 将本controller成为其他controller的一个字段
+    list="{{ list }}" // 设置list的内容
+  >
+  // ng-transclude的内容
+  <rg-list>
+-->
+
+<ul>
+<li ng-repeat="item in list">
+  <!--<ng-transclude></ng-transclude>-->
+  <!--<h3>hello world</h3>-->
+  <div rg-multi-transclude="li"></div>
+</li>
+</ul>

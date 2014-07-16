@@ -1,0 +1,6 @@
+<div class="clear-btn" ng-click="listCtrler.clear()">清空所有</div>
+<rg-list ctrler="listCtrler" list="navList">
+  <div rg-multi-transclude-name="li">
+  <a href="#" ng-click="selectItem(item)">{{ $index }}:{{item.title}} <i class="fa fa-times" ng-click="removeItem(item)"></i></a>
+  </div>
+</rg-list>

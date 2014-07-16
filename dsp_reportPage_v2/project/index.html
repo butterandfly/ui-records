@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="dspApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dashboard Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+  <!--font-awesome-->
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css"/>
+
+  <!--animate.css-->
+  <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
+
+  <!-- 自定义css -->
+  <!--<link href="../base/base.css" rel="stylesheet">-->
+  <link href="source/app.css" rel="stylesheet">
+
+</head>
+
+<!--<body ng-class="{'modal-opened': layoutService.gridModal.isActive}">-->
+<!--<body ng-class>-->
+<body ng-class="{'modal-opened': true}">
+
+<div class="app-loading ng-cloak">
+  <i class="fa fa-refresh fa-spin"></i>
+</div>
+
+<!--下拉窗-->
+<grid-modal></grid-modal>
+
+<!--顶部导航-->
+<top-nav></top-nav>
+
+<div>
+    <!--左导航-->
+    <!--<side-bar-->
+      <!--id="nav-side-bar"-->
+      <!--side="left"-->
+      <!--status="crush"-->
+      <!--ng-class="{'moving-left': layoutService.isManaging,-->
+      <!--'grid-modal-mode': layoutService.gridModal.isActive}">-->
+      <!--<side-nav rg-multi-transclude-name="content">-->
+      <!--</side-nav>-->
+    <!--</side-bar>-->
+
+    <!--右侧工具栏-->
+    <!--<side-bar-->
+      <!--id="filter-bar"-->
+      <!--side='right'-->
+      <!--status="crush"-->
+      <!--ng-class="{'moving-left': layoutService.isManaging}">-->
+
+      <!--<report-filter-intro rg-multi-transclude-name="content"></report-filter-intro>-->
+
+    <!--</side-bar>-->
+
+  <!--主页面-->
+  <report></report>
+
+  <magic-button></magic-button>
+
+</div>
+
+
+<!--后台管理-->
+<manage-center ng-show="layoutService.isManaging"></manage-center>
+
+<!------------------------- javascript ----------------------------->
+
+<!--jquery-->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+
+<!--rg-->
+<script type="text/javascript" src="/base/rg.js"></script>
+
+<!--angularjs-->
+<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
+
+<script type="text/javascript" src="/bower_components/angular-strap/dist/angular-strap.js"></script>
+<script type="text/javascript" src="/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+
+<!--项目代码-->
+<script type="text/javascript" src="/base/init.js"></script>
+<script type="text/javascript" src="/base/directives.js"></script>
+<script type="text/javascript" src="source/app.js"></script>
+
+</body>
+</html>

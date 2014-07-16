@@ -1,0 +1,215 @@
+// ------- grid-modal模块及子模块的区域变量 -------
+
+// 下拉窗的内容高度
+$grid-modal-content-height: 600px;
+// 下拉窗顶部的留空高度（为了抖动动画的美观）
+$grid-modal-white-top-height: 30px;
+// 下拉窗的总高度
+$grid-modal-height: $grid-modal-content-height + $grid-modal-white-top-height;
+// 按钮的宽与高
+$grid-modal-btn-width: 40px;
+$grid-modal-btn-visible-height: 40px;
+$grid-modal-btn-height: 60px;
+
+.grid-modal-backdrop {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 1020;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+
+.grid-modal-backdrop.ng-hide-add {
+  opacity: 0.8;
+  -webkit-transition: all 0.4s ease;
+}
+.grid-modal-backdrop.ng-hide-add-active{
+  opacity: 0;
+}
+.grid-modal-backdrop.ng-hide-remove {
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+}
+.grid-modal-backdrop.ng-hide-remove-active {
+  opacity: 0.8;
+}
+
+.grid-modal-btn {
+  position: absolute;
+  right: $grid-modal-btn-right;
+  cursor: pointer;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  width: $grid-modal-btn-width;
+  height: $grid-modal-btn-height;
+  bottom: -$grid-modal-btn-visible-height;
+  background-color: $primary-red;
+  z-index: -1;
+
+  .grid-count, .plus-one {
+    position: absolute;
+    bottom: 13px;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+  }
+}
+
+/*
+.grid-modal-btn.tipping {
+  background: rgba(255,255,255,1);
+  box-shadow: 0px -2px 10px rgba(255,255,255,0.8), 0px 5px 50px rgba(255,255,255,0.8), 0px 8px 80px rgba(255,255,255,0.6), 0px 8px 120px rgba(255,255,255,0.6);
+  -webkit-transition: all 0.3s ease;
+}
+
+.grid-modal-btn.tipping-remove {
+  -webkit-transition: all 0.3s ease;
+}
+*/
+.grid-modal-btn.tipping {
+  bottom: -60px;
+  -webkit-transition: all 0.3s ease;
+}
+.grid-modal-btn.tipping-remove {
+  -webkit-transition: all 0.3s ease;
+}
+
+
+.grid-modal {
+	z-index: 1030;
+	top: -$grid-modal-height;
+	left: 0;
+	right: 0;
+	height: $grid-modal-height;
+
+	background-color: white;
+	position: fixed;
+	box-shadow: 0 0 10px #444;
+}
+
+.grid-modal-content {
+  height: $grid-modal-content-height;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: $filter-intro-width + 20px;
+  margin-top: $grid-modal-white-top-height;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.grid-modal-content.left-crush {
+  padding-left: $modal-side-bar-content-width + 20px;
+  margin-left: 1px;
+}
+
+.grid-modal-content.right-crush {
+  padding-right: $filter-width + 20px;
+  margin-right: -1px;
+}
+
+.grid-modal.active {
+	top: -$grid-modal-white-top-height;
+}
+
+/*
+.grid-modal.tipping {
+  top: -$grid-modal-height + 30px;
+  -webkit-transition: all 0.2s linear;
+}
+
+.grid-modal.tipping-remove {
+  -webkit-transition: all 0.2s linear;
+}
+*/
+
+@-webkit-keyframes grid-modal-in {
+	0% {
+		-webkit-transform: translateY(-($grid-modal-content-height + $grid-modal-white-top-height));
+		transform: translateY(-($grid-modal-content-height + $grid-modal-white-top-height));
+	}
+
+	40% {
+		-webkit-transform: translateY($grid-modal-white-top-height);
+		transform: translateY($grid-modal-white-top-height);
+	}
+
+	70% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+.grid-modal-in {
+	-webkit-animation-name: grid-modal-in;
+	-webkit-animation-duration: 0.5s;
+}
+
+@-webkit-keyframes grid-modal-out {
+	0% {
+		-webkit-transform: translateY($grid-modal-content-height);
+		transform: translateY($grid-modal-content-height);
+	}
+
+	30% {
+		-webkit-transform: translateY($grid-modal-content-height + 20px);
+		transform: translateY($grid-modal-content-height + 20px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+
+.grid-modal-out {
+	-webkit-animation-name: grid-modal-out;
+	-webkit-animation-duration: 0.5s;
+}
+
+#grid-modal-nav-side-bar {
+  @include absolute-left;
+  //padding-top: 30px;
+  top: 30px;
+
+  z-index: 100;
+
+  .slim-wrap {
+    width: 10px;
+
+    //top: 0;
+    //bottom: 0;
+    //height: auto;
+
+  }
+
+  .content-wrap {
+    //top: 30px;
+    //bottom: 0;
+    //height: auto;
+
+  }
+}
+
+#grid-modal-filter-bar {
+  @include absolute-right;
+  top: 30px;
+
+  z-index: 100;
+
+  .slim-wrap {
+    width: $filter-intro-width;
+  }
+}

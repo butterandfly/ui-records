@@ -1,0 +1,109 @@
+<div id="report-filter" class="hide">
+
+<!--纬度选择、组合-->
+<div class="report-filter-item">
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option1"> 单个
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option2"> 组合
+    </label>
+  </div>
+  <div class="lat-select-pad">
+    <label><input type="radio" name="lat-s" > 活动</label>
+    <label><input type="radio" name="lat-s" > 创意包</label>
+    <label><input type="radio" name="lat-s" > 渠道</label>
+  </div>
+  <div class="lat-comb-pad">
+    <label><input type="checkbox" name="lat-s" > 活动</label>
+    <label><input type="checkbox" name="lat-s" > 创意包</label>
+    <label><input type="checkbox" name="lat-s" > 渠道</label>
+    <label><input type="checkbox" name="lat-s" > 日期</label>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!--日期与搜索-->
+<div class="report-filter-item">
+  <button class="btn btn-default btn-sm">2014-06-07 ~ 1014-06-15</button>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option1"> 今日
+    </label>
+      <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option2"> 昨日
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option3"> 近7日
+    </label>
+  </div>
+</div>
+<div class="report-filter-item">
+  <input type="text" placeholder="请输入搜索关键字"/>
+  <button class="btn btn-default btn-sm">搜索</button>
+</div>
+
+<div class="rule"></div>
+
+<!--过滤-->
+<!--状态-->
+<div class="report-filter-item">
+  <label class="filter-label">类型</label>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option1"> PC广告
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option2"> 移动广告
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option3"> 广告监测
+    </label>
+  </div>
+</div>
+
+<div class="report-filter-item">
+  <label class="filter-label">渠道</label>
+  <z-controller controller="select-pad"></z-controller>
+</div>
+<div class="report-filter-item">
+  <label class="filter-label">标签</label>
+  <z-controller controller="select-pad"></z-controller>
+</div>
+<div class="report-filter-item">
+  <label class="filter-label">状态</label>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option1"> 所有状态
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option2"> 进行中
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option3"> 已暂停
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option4"> 未开始
+    </label>
+    <label class="btn btn-default btn-sm">
+      <input type="radio" name="options" id="option5"> 已结束
+    </label>
+  </div>
+</div>
+<div class="report-filter-item">
+  <label class="filter-label">纬度过滤</label>
+  <z-controller controller="select-pad"></z-controller>
+</div>
+<div class="report-filter-item">
+  <label class="filter-label">指标</label>
+  <z-controller controller="select-pad"></z-controller>
+</div>
+
+<div class="rule"></div>
+
+<div>
+  <button class="btn btn-success button-filter">应用</button>
+</div>
+</div>

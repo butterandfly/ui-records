@@ -1,0 +1,124 @@
+#report-filter {
+	position: fixed;
+	top: 90px;
+	width: 100%;
+	z-index: 778;
+	background-color: #FCFCFC;
+	padding-top: 7px;
+	padding-left: 40px;
+	padding-bottom: 15px;
+
+	box-shadow:0 3px 12px rgba(0,0,0,0.25);
+	border-bottom:1px solid rgba(0,0,0,0.15);
+
+}
+
+#report-filter {
+	-webkit-animation-duration: 0.3s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+}
+
+.lat-select-pad, .lat-comb-pad {
+	display: inline-block;
+}
+
+.report-filter-item {
+	margin-top: 7px;
+}
+
+.lat-select, .show-selected-lat {
+	display: inline-block;
+	vertical-align: top;
+	height: 250px;
+	width: 350px;
+	background-color: white;
+	border: #aaa solid 1px;
+}
+
+.lat-select-head, .show-selected-lat-head {
+	border-bottom: 1px #aaa solid;
+	padding: 7px;
+}
+
+.lat-select-head input {
+	width: 190px;
+	margin-left: 10px;
+}
+
+.lat-select-body ul, .show-selected-lat-body ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lat-select-body li, .show-selected-lat-body li {
+	padding: 7px 10px;
+}
+
+.show-selected-lat-head {
+	height: 49px;
+}
+
+.show-selected-lat-head label {
+	line-height: 35px;
+}
+
+.rule {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.button-area {
+	height: 600px;
+}
+
+.button-area button {
+	height: inherit;
+	width: 210px;
+}
+
+/*
+#report-filter {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	width: 400px;
+	z-index: 778;
+	bottom: 0;
+	background-color: #EEEEEE;
+	padding-top: 7px;
+	padding-left: 10px;
+
+	box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+	border: 1px solid rgba(0,0,0,0.15);
+}
+
+.rule {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.report-filter-item {
+	margin-top: 7px;
+}
+
+#report-filter {
+	-webkit-animation-duration: 0.3s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+}
+
+.filter-label {
+	color: #999;
+	display: block;
+}
+*/

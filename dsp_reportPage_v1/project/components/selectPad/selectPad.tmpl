@@ -1,0 +1,20 @@
+<div class="select-pad">
+  <!--已选-->
+  <span ng-repeat="item in selectedItems" class="badge selected-item" ng-click="deleteSelected(item)">{{ item }} <span class="delete-item">X</span></span>
+  <!--新增-->
+  <span class="btn btn-default btn-sm add-new" ng-click="openSelectList()">+</span>
+  <!--选择冒泡框-->
+  <div class="select-modal" ng-show="isSelectListOpened">
+    <div class="select-title">
+      <span>请选择过滤条件</span>
+      <button type="button" class="close .pull-right" aria-hidden="true" ng-click="closeSelectList()">&times;</button>
+    </div>
+    <!--搜索框-->
+    <div class="search">
+      <input type="text" placeholder="请输入搜索关键字"/>
+    </div>
+
+    <rg-list rg-list-model="selectList" rg-list-selected="selectedItems"></rg-list>
+
+  </div>
+</div>

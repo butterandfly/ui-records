@@ -1,0 +1,36 @@
+#filter-bar {
+  @include fixed-right;
+  top: 50px;
+
+  z-index: 100;
+
+  $animation-time: 0.2s;
+  .content-wrap.ng-hide-remove {
+    opacity: 0;
+    -webkit-transform: translate(200px);
+    -webkit-transition: all $animation-time ease;
+  }
+  .content-wrap.ng-hide-remove-active {
+    -webkit-transform: translate(0px);
+    opacity: 1;
+  }
+
+  .content-wrap.ng-hide-add {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    -webkit-transition: all $animation-time ease;
+  }
+  .content-wrap.ng-hide-add-active {
+    -webkit-transform: translate(200px);
+    opacity: 0;
+  }
+}
+
+#filter-bar.moving-left {
+  right: 100%;
+
+  @include managing-move-left;
+}
+#filter-bar.moving-left-remove {
+  @include managing-move-left;
+}

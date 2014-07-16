@@ -1,0 +1,47 @@
+<div class="main-container" ng-class="{'left-crush': layoutService.leftBar.status == 'crush', 'right-crush': layoutService.rightBar.status == 'crush'}">
+<div class="">
+  <span class="page-title">报表与管理</span>
+  <span class="button-con"><button class="btn btn-success">新增活动</button><button class="btn btn-default">模板管理</button></span>
+</div>
+<div class="">
+  <rg-loading loading="isLoading"></rg-loading>
+
+  <!--标题与新增-->
+  <!--
+  <h3>{{ title }}</h3>
+  <div class="op-con pull-right">
+    <a class="btn btn-primary btn-sm" ng-click="loadData()">批量操作</a>
+    <a class="btn btn-primary  btn-sm" ng-click="loadData()">自动刷新</a>
+  </div>
+  -->
+
+  <!--modal测试-->
+  <button type="button" class="btn btn-lg btn-primary" data-animation="am-fade-and-scale" data-placement="center" bs-modal="{title: 'hi', content: 'hihi...'}">Click to toggle modal
+  </button>
+
+  <div class="index-con btn-group">
+    <button class="btn btn-default btn-sm">默认</button>
+    <button class="btn btn-default btn-sm">前端</button>
+    <button class="btn btn-default btn-sm">落地页</button>
+    <button class="btn btn-default btn-sm">转化</button>
+    <button class="btn btn-default btn-sm">成本</button>
+  </div>
+  <div class="table-responsive report-table-cont">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th ng-repeat="index in reportIndexes">{{ index.name }}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="row in rows">
+      <!--<tr ng-repeat="row in [1, 2, 3]">-->
+        <!--<td ng-repeat="index in reportIndexes track by $index">{{item}}</td>-->
+        <td ng-repeat="index in reportIndexes">{{ row[index.key] }}</td>
+        <!--<td>7</td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

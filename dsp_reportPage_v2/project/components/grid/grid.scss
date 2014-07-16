@@ -1,0 +1,117 @@
+grid{
+  padding-top: 20px;
+  display: block;
+
+  .title-date-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .grid-title {
+    margin: 0;
+    padding: 0;
+  }
+
+  // 该容器使得表格头与首列固定
+  .grid-fixable {
+    position: relative;
+  }
+
+  // 该容器使得表格scrollable
+  .grid-scrollable {
+    width: inherit;
+    overflow-x: auto;
+  }
+
+  .fixed-header-cont {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+
+    overflow-x: hidden;
+
+    box-shadow: rgb(187, 187, 187) 0px 4px 2px -2px;
+  }
+
+  //固定表头
+  .fixed-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+    td {
+      background-color: white;
+      width: 200px;
+    }
+  }
+
+  table {
+    table-layout: fixed;
+    width: 1700px;
+    background-color: white;
+
+    thead {
+      tr {
+        border-bottom: 1px solid #aaa;
+        background-color: white;
+      }
+
+      th {
+        height: 40px;
+        padding: 0;
+        line-height: 40px;
+        background-color: inherit;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #aaa;
+        background-color: white;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #F7f7f7;
+      }
+
+
+      tr.preselected {
+        background-color: rgb(231, 248, 255);
+      }
+
+      td {
+        height: 50px;
+        padding: 0;
+        line-height: 50px;
+        background-color: inherit;
+      }
+    }
+
+
+    .fixed-col-1 {
+      position: absolute;
+      left: 0;
+      width: 170px;
+      z-index: 9;
+      border-right: 1px solid #aaa;
+    }
+
+
+    tr.ng-enter {
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    tr.ng-enter-stagger {
+      transition-delay: 0.05s;
+    }
+
+    tr.ng-enter-active {
+      opacity: 1;
+    }
+
+
+  }
+}

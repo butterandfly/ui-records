@@ -1,0 +1,35 @@
+.clear-btn {
+	height: 40px;
+	padding-left: 90px;
+	background: rgb(207, 45, 45);
+	font-size: 18px;
+	font-weight: bolder;
+	color: white;
+	cursor: pointer;
+	line-height: 40px;
+}
+
+.nav-list {
+	border-right: 1px solid #aaa;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.nav-list li a{
+	display: block;
+	padding-left: 10px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	border-bottom: 1px solid #aaa;
+	color: #444;
+}
+
+.nav-list li a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #333;
+}

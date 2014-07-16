@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Layout</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+  <!--font-awesome-->
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css"/>
+
+  <!--animate.css-->
+  <link href="/bower_components/animate.css/animate.css" rel="stylesheet">
+
+  <style type="text/css">
+    div {
+      border: 1px solid #777;
+      height: 800px;
+    }
+
+    .left, .middle, .right {
+    }
+
+    .left, .right, .left-box, .right-box {
+      position: absolute;
+      top:0;
+      width: 20px;
+      z-index: 10;
+    }
+
+    .left, .left-box {
+      left:0;
+      background-color: coral;
+    }
+
+    .right, .right-box {
+      right:0;
+      background-color: lightgreen;
+    }
+
+    .left-box, .right-box {
+      width:200px
+    }
+
+    .middle {
+      background-color: lightseagreen;
+      position: relative;
+    }
+
+    .l-crush {
+      padding-left: 200px;
+    }
+
+    .check {
+      width: 220px;
+      float: right;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body ng-controller="layout">
+
+<!--<div class="left" ng-show="isLeftSlim"></div>-->
+<div class='left-box' ng-show="isLeftSlim" ng-click="crushLeft()"></div>
+<div class="middle" ng-class="{'l-crush': lCrush}">
+<div class="check"></div>
+</div>
+<!--<div class="right" ng-show="isRightSlim"></div>-->
+<div class="right-box" ng-show="isRightSlim"></div>
+
+
+<!--jquery-->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+
+<!--rg-->
+<script type="text/javascript" src="/base/rg.js"></script>
+
+<!--angularjs-->
+<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
+
+<script type="text/javascript">
+  angular.module('app', [])
+    .controller('layout', function($scope) {
+      $scope.isLeftSlim = true;
+      $scope.isRightSlim = true;
+
+      $scope.lCrush = false;
+      $scope.rCrush = false;
+
+      $scope.crushLeft = function() {
+        $scope.lCrush = !$scope.lCrush;
+      }
+    })
+</script>
+
+</body>
+</html>

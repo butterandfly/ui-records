@@ -1,0 +1,46 @@
+report-filter {
+  display: block;
+
+  height: 100%;
+  width: 400px;
+
+  background-color: $gray-lv7;
+  //background-color: $gray-lv3;
+
+  .report-filter-item {
+    padding-bottom: 7px;
+    padding-left: 13px;
+
+    border-bottom: 1px solid #555;
+
+    label.filter-label {
+      color: #444;
+      height: 35px;
+      line-height: 35px;
+      margin-bottom: 0;
+      display: block;
+    }
+
+    .radio-list, .checkbox-list {
+      @include rg-ul-clean;
+
+      li {
+        display: inline-block;
+        min-width: 80px;
+        padding-right: 10px;
+
+        input {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+/*
+report-filter {
+	-webkit-animation-duration: 0.3s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+}
+*/

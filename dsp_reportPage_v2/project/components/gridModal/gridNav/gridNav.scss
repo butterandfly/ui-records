@@ -1,0 +1,48 @@
+grid-nav {
+  width: $modal-side-bar-content-width;
+  display: block;
+  height: $grid-modal-height;
+
+  .clear-btn {
+    height: 40px;
+    background: $primary-red;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    line-height: 40px;
+
+    text-align: center;
+  }
+
+  .nav-list {
+    background-color: #eee;
+
+    height: $grid-modal-height;
+
+    li a {
+      display: block;
+      padding-left: 10px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      border-bottom: 1px solid #aaa;
+      color: #444;
+    }
+
+    li a:hover {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #333;
+    }
+
+    li.selected  a {
+      color: #ffffff;
+      background-color: #333;
+    }
+
+    li i:hover {
+      color: indianred;
+    }
+  }
+}

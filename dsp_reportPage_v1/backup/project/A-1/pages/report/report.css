@@ -1,0 +1,59 @@
+.main-container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.main-container.left-crush {
+	padding-left: 290px;
+	margin-left: 1px; /* #hack: 不设置一些东西的话容器宽度不会改变 */
+}
+
+.main-container.right-crush {
+	padding-right: 290px;
+	margin-right: 1px; /* #hack: 不设置一些东西的话容器宽度不会改变 */
+}
+
+.title-con {
+	height: 40px;
+	background: #eee;
+	width: inherit;
+}
+
+.page-title {
+	font-size: 20px;
+	line-height: 40px;
+	padding-left: 40px;
+}
+
+.button-con {
+	display: inline-block;
+	float: right;
+	padding-top: 4px;
+}
+
+.button-con button {
+	margin-right: 7px;
+}
+
+.report-table-cont {
+	width: inherit;
+	overflow-x: auto;
+}
+
+.report-table-cont table {
+	width: 1700px;
+}
+
+table tr.ng-enter {
+	transition: 0.5s;
+	opacity: 0;
+}
+
+table tr.ng-enter-stagger {
+	transition-delay: 0.05s;
+}
+
+table tr.ng-enter-active {
+	opacity: 1;
+}
+

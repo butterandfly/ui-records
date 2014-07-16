@@ -1,0 +1,39 @@
+subgrid-button-group {
+  display: inline-block;
+  position: relative;
+
+  font-size: 1.3em;
+
+  .lead-line {
+    display: block;
+    position: absolute;
+
+    border-left: 2px #333 solid;
+    border-top: 2px #333 solid;
+
+    width: 11px;
+    height: 7px;
+    top: 9px;
+    left: -16px;
+    -webkit-transform: skewX(150deg);
+  }
+
+  .btns-wrap {
+    position: absolute;
+    top: -16px;
+    left: 25px;
+    opacity: 0.4;
+    width: 100px;
+  }
+
+  .btns-wrap:hover {
+    opacity: 1;
+  }
+
+  .btns-wrap i {
+    cursor: pointer;
+  }
+  .btns-wrap i:hover {
+    color: darkred;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="wrapper" ng-mouseleave="mouseleaveBar()" ng-class="{'right': side === 'right'}">
+
+<!-- slim条  -->
+<div class="slim-wrap" ng-mouseenter="mouseenterSlim()" ng-mouseleave="mouseleaveSlim()">
+  <div class="slim-content" rg-multi-transclude="slim"></div>
+</div>
+
+ <!--完整栏 -->
+<!--<div class="content-wrap" animate-show="!(status == 'slim')">-->
+<div class="content-wrap" ng-show="!(status == 'slim')">
+  <!--固定按钮-->
+  <full-y-button class="nail-btn" ng-click="toggleCrush()" ng-hide="status === 'crush'">
+    <i class="fa fa-thumb-tack"></i>
+  </full-y-button>
+
+  <!--取消固定按钮-->
+  <full-y-button ng-show="status === 'crush'" ng-click="status = 'slim'" class="cancel-crush-btn">
+    <i class="fa fa-angle-double-{{ side }}"></i>
+  </full-y-button>
+
+  <!--侧兰内容-->
+  <div class="content" rg-multi-transclude="content"></div>
+</div>
+
+</div>

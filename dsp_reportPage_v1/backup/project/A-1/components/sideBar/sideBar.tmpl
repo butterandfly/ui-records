@@ -1,0 +1,12 @@
+<div class="wrapper" ng-mouseleave="mouseleaveBar()">
+
+<!-- slim条  -->
+<div class="slim" ng-mouseenter="mouseenterSlim()" ng-mouseleave="mouseleaveSlim()"></div>
+
+ <!--完整栏 -->
+<div class="content" animate-show="!(status == 'slim')">
+  <div class="nail-btn" ng-click="toggleCrush()">钉</div>
+  <div ng-transclude></div>
+</div>
+
+</div>

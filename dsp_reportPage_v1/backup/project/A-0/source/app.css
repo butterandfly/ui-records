@@ -1,0 +1,232 @@
+.title-con {
+	height: 40px;
+	background: #eee;
+}
+
+.page-title {
+	font-size: 20px;
+	line-height: 40px;
+	padding-left: 40px;
+}
+
+.button-con {
+	display: inline-block;
+	float: right;
+	/* vertical-align: middle; */
+	padding-top: 4px;
+}
+
+.button-con button {
+	margin-right: 7px;
+}
+#report-filter {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	width: 400px;
+	z-index: 778;
+	bottom: 0;
+	background-color: #EEEEEE;
+	padding-top: 7px;
+	padding-left: 10px;
+
+	box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+	border: 1px solid rgba(0,0,0,0.15);
+}
+
+.rule {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.report-filter-item {
+	margin-top: 7px;
+}
+
+#report-filter {
+	-webkit-animation-duration: 0.3s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+}
+
+.filter-label {
+	color: #999;
+	display: block;
+}
+#report-filter-intro {
+	position: fixed;
+	top: 90px;
+	right: 0;
+	width: 250px;
+	z-index: 778;
+	bottom: 0;
+	cursor: pointer;
+	background-color: #ddd;
+	padding-left: 13px;
+}
+
+#report-filter-intro label {
+	color: #999;
+}
+
+.intro-item {
+	padding-bottom: 17px;
+}
+
+.list-pad {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.list-pad li {
+	display: inline-block;
+	width: 100px;
+	padding: 2px;
+}
+
+.list {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.list li {
+	padding-bottom: 5px;
+}
+
+.list li span {
+	margin-left: 5px;
+}
+
+.white-bg {
+	background-color: #fff;
+}
+
+.lat-title {
+	font-weight: bolder;
+}
+.hide {
+	display: none;
+}
+
+.select-pad {
+	position: relative;
+	display: inline-block;
+}
+
+/*添加项*/
+.add-new {
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	padding: 6px 0;
+	font-size: 12px;
+	line-height: 10px;
+	border-radius: 15px;
+	color: #008000;
+	cursor: pointer;
+}
+
+.selected-item {
+	background-color: #428bca;
+}
+
+.delete-item {
+	color: #666;
+	padding-left: 3px;
+	cursor: pointer;
+}
+
+/*选择modal*/
+.select-modal {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 7;
+
+	width: 300px;
+	margin-top: 4px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #666;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,0.15);
+	border-radius: 5px;
+	box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+}
+
+/*标题栏*/
+.select-modal .select-title {
+	padding: 8px 10px;
+	background-color: #eeeeee;
+	background-image: -moz-linear-gradient(#fafafa, #eee);
+	background-image: -webkit-linear-gradient(#fafafa, #eee);
+	background-image: linear-gradient(#fafafa, #eee);
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #ddd;
+
+	font-weight: bold;
+	color: #333;
+	text-shadow: 0 1px 0 #fff;
+}
+
+/*搜索框*/
+.select-modal .search {
+	background-color: #f8f8f8;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+/*搜索输入框*/
+.select-modal .search input {
+	height: 35px;
+	width: 280px;
+}
+
+/*列表*/
+.select-modal .select-list {
+	max-height: 400px;
+	overflow: auto;
+	position: relative;
+}
+
+.select-modal .select-item {
+	cursor: pointer;
+	border-bottom: 1px solid #eee;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	overflow: hidden;
+}
+
+.select-modal .select-item-icon {
+	display: table-cell;
+	color: transparent;
+	vertical-align: top;
+	padding: 8px 0 8px 8px;
+	width: 24px;
+	text-align: center;
+}
+
+.select-modal .select-item-title {
+	display: table-cell;
+	vertical-align: top;
+	padding: 8px;
+	text-align: left;
+
+	font-size: 12px;
+	font-color: #666;
+}
+
+.select-modal .modal-foot {
+	padding: 8px;
+	font-weight: bold;
+	border-top: 1px solid #eee;
+}

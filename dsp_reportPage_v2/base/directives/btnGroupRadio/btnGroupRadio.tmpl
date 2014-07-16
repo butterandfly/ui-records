@@ -1,0 +1,5 @@
+<div class="btn-group">
+  <label ng-repeat="item in listCtrler.list" class="btn btn-default btn-sm" ng-class="{active: listCtrler.isSelected(item)}" ng-click="listCtrler.selectItem(item)">
+    {{ item.text }}
+  </label>
+</div>

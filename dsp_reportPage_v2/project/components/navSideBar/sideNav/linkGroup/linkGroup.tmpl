@@ -1,0 +1,10 @@
+  <div>
+    <span class="link-lv1">{{ title }}</span>
+    <span ng-click="toggleSub()" class="expand-btn pull-right">
+      <i class="fa fa-chevron-down" ng-hide="isSubOpened"></i>
+      <i class="fa fa-chevron-up" ng-show="isSubOpened"></i>
+    </span>
+  </div>
+  <ul ng-show="isSubOpened">
+    <li ng-repeat="item in listCtrler.list">{{ item.text }}</li>
+  </ul>

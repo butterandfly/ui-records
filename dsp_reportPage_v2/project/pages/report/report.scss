@@ -1,0 +1,44 @@
+.main-container {
+  position: relative;
+  left: 0; /* 用于动画 */
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// 进入管理后台时main-container的位置与动画
+.main-container.moving-left {
+  left: -100%;
+
+  @include managing-move-left;
+}
+// 退出管理后台时main-container的位置与动画
+.main-container.moving-left-remove {
+  @include managing-move-left;
+}
+
+// 受左导航挤压时的样式
+.main-container.left-crush {
+  padding-left: $nav-side-bar-content-width + 20px;
+  margin-left: 1px; /* #hack: 不设置一些东西的话容器宽度不会改变 */
+}
+
+// 受右过滤器挤压时的样式
+.main-container.right-crush {
+	padding-right: $filter-bar-content-width + 20px;
+	margin-right: -1px; /* #hack: 不设置一些东西的话容器宽度不会改变 */
+}
+
+// gridModal显示时的样式与动画
+.main-container.grid-modal-mode {
+  @include translate-x(-370px);
+  @include all-ease-transition($grid-modal-show-interval);
+}
+.main-container.grid-modal-mode-remove {
+  @include all-ease-transition($grid-modal-show-interval);
+  @include delay($grid-modal-show-delay);
+}
+
+
+
+

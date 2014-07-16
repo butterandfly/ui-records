@@ -1,0 +1,48 @@
+grid{
+  padding-top: 20px;
+  display: block;
+
+  .title-date-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .grid-title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .report-table-cont-lv1 {
+    position: relative;
+
+    padding-top: 20px;
+
+    width: inherit;
+    overflow-x: auto;
+  }
+
+  .report-table-cont {
+    width: inherit;
+    overflow-x: auto;
+  }
+
+  .report-table-cont table {
+    width: 1700px;
+  }
+
+  .report-table-cont.fixed-head {
+    padding-top: 20px;
+    overflow-y: auto;
+    height: 300px;
+
+    table thead th {
+      height: 0;
+      line-height: 0;
+
+      div {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}
